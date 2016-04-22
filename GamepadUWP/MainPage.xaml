@@ -1,0 +1,65 @@
+﻿<Page
+    x:Class="GamepadUWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GamepadUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Canvas Width="600" Height="400">
+                                <Image Source="Assets/xbox-one-controller.png" Width="400" Height="400"/>
+                                <TextBlock Name="lblA" FontSize="25" FontWeight="Bold" Foreground="#FF2CFD78" Visibility="Visible" Canvas.Left="294" Canvas.Top="165">A</TextBlock>
+                                <TextBlock Name="lblB" FontSize="25" FontWeight="Bold" Foreground="#FFFD2C2C" Visibility="Visible" Canvas.Left="324" Canvas.Top="141" >B</TextBlock>
+                                <TextBlock Name="lblY" FontSize="25" FontWeight="Bold" Foreground="Yellow" Visibility="Visible" Canvas.Left="296" Canvas.Top="111" >Y</TextBlock>
+                                <TextBlock Name="lblX" FontSize="25" FontWeight="Bold" Foreground="#FF1CB5CD" Visibility="Visible" Canvas.Left="267" Canvas.Top="139" >X</TextBlock>
+                                <TextBlock Name="lblMenu" FontSize="25" FontWeight="Bold" Foreground="#FFE9E7EE" Visibility="Visible" Canvas.Left="221" Canvas.Top="138" >=</TextBlock>
+                                <TextBlock Name="lblDPadLeft" FontSize="25" FontWeight="Bold" Foreground="#FFE9E7EE" Visibility="Visible" Canvas.Left="122" Canvas.Top="201" >o</TextBlock>
+                                <TextBlock Name="lblDPadRight" FontSize="25" FontWeight="Bold" Foreground="#FFE9E7EE" Visibility="Visible" Canvas.Left="159" Canvas.Top="201" >o</TextBlock>
+                                <TextBlock Name="lblDPadUp" FontSize="25" FontWeight="Bold" Foreground="#FFE9E7EE" Visibility="Visible" Canvas.Left="139" Canvas.Top="183" >o</TextBlock>
+                                <TextBlock Name="lblDPadDown" FontSize="25" FontWeight="Bold" Foreground="#FFE9E7EE" Visibility="Visible" Canvas.Left="139" Canvas.Top="221" >o</TextBlock>
+                                <TextBlock Name="lblView" FontSize="25" FontWeight="Bold" Foreground="#FF7D8DF0" Visibility="Visible" Canvas.Left="165" Canvas.Top="135" Height="32" Width="16" >::</TextBlock>
+
+                                <Ellipse Name="ellRightThumbstick" Width="50" Height="50" Fill="#FFB43D3D" Opacity="0.5" Canvas.Left="228" Canvas.Top="191" Visibility="Visible"></Ellipse>
+                                <Ellipse Name="ellLeftThumbstick" Width="50" Height="50" Fill="#FFB43D3D" Opacity="0.5" Canvas.Left="73" Canvas.Top="131" Visibility="Visible"></Ellipse>
+                                <Rectangle Name="recRightShoulder" Width="63.074" Height="9.396" Fill="#FF10121D" Opacity="0.9" Canvas.Left="278.23" Canvas.Top="77.516" Visibility="Visible" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                                        <Rectangle.RenderTransform>
+                                                <CompositeTransform Rotation="19.178"/>
+                                        </Rectangle.RenderTransform>
+                                </Rectangle>
+                                <Rectangle Name="rectLeftShoulder" Width="63.933" Height="8.606" Fill="#FF10121D" Opacity="0.9" Canvas.Left="62.216" Canvas.Top="76.683" Visibility="Visible" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                                        <Rectangle.RenderTransform>
+                                                <CompositeTransform Rotation="-15.006"/>
+                                        </Rectangle.RenderTransform>
+                                </Rectangle>
+
+                                <ProgressBar Name="pbLeftThumbstickX" Height="5" Minimum="-1" Maximum="1" Canvas.Left="80" Canvas.Top="152" Foreground="#FF00D74E" />
+                                <ProgressBar Name="pbLeftThumbstickY" Height="5" Minimum="-1" Maximum="1" Canvas.Left="80.666" Canvas.Top="154.655" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Foreground="#FF00D74E" >
+                                        <ProgressBar.RenderTransform>
+                                                <CompositeTransform Rotation="-89.789"/>
+                                        </ProgressBar.RenderTransform>
+                                </ProgressBar>
+
+                                <ProgressBar Name="pbRightThumbstickX" Height="5" Minimum="-1" Maximum="1" Canvas.Left="231" Canvas.Top="211" />
+                                <ProgressBar Name="pbRightThumbstickY" Height="5" Minimum="-1" Maximum="1" RenderTransformOrigin="0.5,0.5" Canvas.Left="234.666" Canvas.Top="210.667" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                                        <ProgressBar.RenderTransform>
+                                                <CompositeTransform Rotation="-90"/>
+                                        </ProgressBar.RenderTransform>
+                                </ProgressBar>
+
+                                <ProgressBar Name="pbLeftTrigger" Height="7" Minimum="0" Maximum="1" Canvas.Left="73" Canvas.Top="60" Foreground="#FF00D74E" />
+                                <ProgressBar Name="pbRightTrigger" Height="7" Minimum="0" Maximum="1" Canvas.Left="293" Canvas.Top="60" Foreground="#FF00D74E" />
+                        </Canvas>
+                        <StackPanel>
+                                <TextBlock>Events:</TextBlock>
+                                <TextBlock Name="txtEvents" TextWrapping="WrapWholeWords" Width="400" Height="400"></TextBlock>
+                        </StackPanel>
+                </StackPanel>
+
+        </Grid>
+</Page>
+
+
