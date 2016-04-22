@@ -3,7 +3,8 @@ Sample code to read Xbox one gamepad controller on a Universal Windows Platform 
 
 The app shows all buttons and triggers that are pressed. It also shows the events (GamepadAdded, GamepadRemoved, HeadsetConnected, etc).
 
-[User Interface][https://github.com/tiagonmas/GamepadUWP/blob/master/GamepadUwp_UI.png]
+![User interface](https://github.com/tiagonmas/GamepadUWP/blob/master/GamepadUwp_UI.png)
+
  
 ## Next Steps
 * Improve UI
